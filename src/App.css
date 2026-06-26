@@ -1,0 +1,16 @@
+
+:root{
+  --bleu: #18ce; --green: #1db954; --gray: #333;
+  --dark: #111; --dull: #999;
+  --wyte: #fff; --orange: #ff7600;
+}
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
