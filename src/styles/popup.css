@@ -1,0 +1,61 @@
+
+.popup{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    display: flex;
+}
+
+.popup .card{
+    background: #ececec;
+    color: #111;
+    padding: 16px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+    animation: up .3s ease forwards;
+    border-radius: 16px;
+}
+
+.popup .card .line{
+    background: #111;
+    border-radius: 16px;
+    padding: 2px;
+    position: absolute;
+    top: 4px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.popup .card button{
+    width: 100%;
+    padding: 12px;
+    border-radius: 16px; border: 1px solid transparent;
+    transition: border .3s ease;
+    cursor: pointer; background: var(--grey);
+    color: white;
+    font-family: inherit;
+}
+
+.popup .card .content{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 6px;
+}
+
+.popup .card button:hover{
+    border-color: var(--purple);
+}
+
+@keyframes up{
+    from{opacity: 0; transform: translateY(60px);}
+    to{opacity: 1; transform: translateY(0px);}
+}
