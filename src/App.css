@@ -1,8 +1,9 @@
 
 :root{
-  --bleu: #18ce; --green: #1db954; --gray: #333;
-  --dark: #111; --dull: #999;
-  --wyte: #fff; --orange: #ff7600;
+    --purple: #7b62ff;
+    --purple-over: #614ec4;
+    --bg: #060810;
+    --grey: #1c1d28;
 }
 
 *{padding: 0; margin: 0; box-sizing: border-box;}
@@ -11,6 +12,8 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
   display: flex;
+  background: var(--bg);
+  color: #fff;
   align-items: center;
   justify-content: center;
 }
