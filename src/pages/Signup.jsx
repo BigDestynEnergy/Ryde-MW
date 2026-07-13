@@ -1,25 +1,27 @@
+
 import { useState } from "react"
 import eyee from "../assets/eye.svg"
 import eyes from "../assets/eye-slash.svg"
 import "../styles/Login.css"
 import { useNavigate } from "react-router-dom";
 
-export function Login(){
+export function Signup(){
     const [email, setEmail] = useState("");
+    const [name, setName] = useState("");
     const [password, setPassword] = useState("")
     const [eye, setEye] = useState(false);
     const [success, setSuccess] = useState(false);
     const [note, setNote] = useState("");
     const navigate = useNavigate();
 
-    function notification(value){
+    function notify(value){
         setNote(value);
         setTimeout(() => {
             setNote("")
         }, 2000);
     }
 
-    const submit = (e)=>{
+  const submit = (e)=>{
         e.preventDefault();
         if(!email){
             notification("Please enter your email");
@@ -34,9 +36,9 @@ export function Login(){
     return(
         <div className="Log">
             <form onSubmit={submit}>
-                
-                <h1>Login</h1>
+                <h1>Lets get started</h1>
                 {note && (<span className={success ? "success note" : "note"}>Yo</span>)}
+                <input type="text" value={name} onChange={(e)=>setName(e.target.value)} placeholder="Enter your full name" />
                 <input type="email" placeholder="Enter your email" value={email}
                 onChange={(e)=>setEmail(e.target.value)} />
             
@@ -47,9 +49,9 @@ export function Login(){
                 </div>
                 <button type="submit">Login</button>
 
-                <span className="go-to"
-                onClick={()=>navigate("/signup")}
-                >Go to signup</span>
+                <span className="go-to" 
+                onClick={()=>navigate("/")}
+                >Go to login</span>
             </form>
         </div>
     )

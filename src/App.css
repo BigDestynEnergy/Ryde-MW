@@ -9,8 +9,8 @@
 *{padding: 0; margin: 0; box-sizing: border-box;}
 
 body{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100vh;
+  font-family: montserrat;
+ min-height: 100vh;
   display: flex;
   background: var(--bg);
   color: #fff;

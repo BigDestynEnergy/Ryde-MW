@@ -5,6 +5,22 @@ form{
     align-items: center;
     justify-content: center;
     gap: 6px;
+    animation: down .4s ease forwards;
+}
+
+form h1{
+    padding: 8px;
+}
+
+form .note{
+    width: 250px;
+    padding: 8px;
+    border: 2px solid #a80303;
+    border-radius: 4px;
+    font-family: inherit;
+    transition: all .3s ease;
+    color: #fff;
+    animation: slide .3s ease forwards;
 }
 
 form input, form button{
@@ -19,6 +35,11 @@ form input, form button{
 
 form input{
     background: var(--grey);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form input:hover{
+    background: #0b0e1be1;
 }
 
 form input:focus{
@@ -40,6 +61,7 @@ form input:focus{
     position: absolute;
     right: 10px;
     filter: invert(1);
+    cursor: pointer;
 }
 
 form button{
@@ -64,4 +86,18 @@ form button:hover{
 .go-to:hover{
     color: var(--purple);
     text-decoration: underline;
+}
+
+.note.success{
+    border-color: #1db954;
+}
+
+@keyframes down{
+    from{opacity: 0; transform: translateY(-20px);}
+    to{opacity: 1; transform: translateY(0px);}
+}
+
+@keyframes slide{
+    from{opacity: 0; transform: translateX(20px);}
+    to{opacity: 1; transform: translateX(0px);}
 }
